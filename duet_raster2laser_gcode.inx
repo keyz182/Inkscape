@@ -3,19 +3,19 @@
 <!--  -->
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
 	<!-- Nome con cui compare l'estensione nel menù, fa casino con gli underscore _ -->
-	<name>Raster 2 Laser GCode generator</name>
+	<name>Duet Raster 2 Laser GCode generator</name>
 	<!-- il campo ID deve essere univoco  -->
-	<id>com.305engineering.raster2laser_gcode</id>
+	<id>com.305engineering.raster2laser_gcode_duet</id>
 	
 	<!-- Dipendenze, basta solo lo script python principale -->
-	<dependency type="executable" location="extensions">raster2laser_gcode.py</dependency>
+	<dependency type="executable" location="extensions">duet_raster2laser_gcode.py</dependency>
 	<dependency type="executable" location="extensions">inkex.py</dependency>
 	    	
 	<!-- Parametri di input per lo script python che vengono visualizzati nel widget creato da inkscape-->
 	<!-- vengono generati in ordine di come vengono scritti  -->
 	
 	<!-- Titolo e descrizione -->
-	<param name="Title" type="description">Raster 2 Laser GCode generator</param>
+	<param name="Title" type="description">Duet Raster 2 Laser GCode generator</param>
 	<param name="Description" type="description">created by 305 Engineering</param>
     
 	<!-- Opzioni di esportazione dell'immagine -->
@@ -82,9 +82,6 @@
 		<_item value="3">No Homing</_item>
 	</param>
 	
-	<param name="laseron" type="string"  gui-text="Laser ON Command">M03</param>
-	<param name="laseroff" type="string"  gui-text="Laser OFF Command">M05</param>
-	
 	<!-- Anteprima = Solo immagine BN -->
 	<param name="preview_only" type="boolean" gui-text="Preview only">false</param>
 	<param name="p_only" type="description">If "Preview only" is true the gcode file will not be generated.</param>
@@ -104,7 +101,7 @@
     
 	<!-- Script python da eseguire -->
 	<script>
-    	<command reldir="extensions" interpreter="python">raster2laser_gcode.py</command>
+    	<command reldir="extensions" interpreter="python">duet_raster2laser_gcode.py</command>
     </script>
 </inkscape-extension>
 
